@@ -1,4 +1,14 @@
 version: '3'
 services:
     litebit-eu-stock-checker:
+        env_file:
+            - docker-compose-variables.env
         build: .
+    rabbit:
+        image: rabbitmq:3.6.12-management
+        environment:
+            RABBITMQ_DEFAULT_USER: samantha
+            RABBITMQ_DEFAULT_PASS: samantha
+        ports:
+            - 5672:5672
+            - 15672:15672

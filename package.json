@@ -1,6 +1,6 @@
 {
   "name": "litebit.eu-stock-checker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Quick and dirty tool to check whether there's stock in LiteBit.eu",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "amqpimping": "^0.1.0",
     "bunyan": "^1.8.12",
     "cheerio": "^1.0.0-rc.2",
     "cloudscraper": "^1.4.1",
