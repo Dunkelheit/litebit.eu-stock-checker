@@ -50,10 +50,18 @@ const config = convict({
             env: 'AMQP_PASSWORD'
         },
         queue: {
-            doc: 'Queue that Samantha will be listening to',
-            format: String,
-            default: null,
-            env: 'AMQP_QUEUE'
+            message: {
+                doc: 'Queue used to have Samantha send messages in Slack',
+                format: String,
+                default: null,
+                env: 'AMQP_QUEUE_MESSAGE'
+            },
+            service: {
+                doc: 'Queue used to have Samantha start and stop services',
+                format: String,
+                default: null,
+                env: 'AMQP_QUEUE_SERVICE'
+            }
         },
         retry: {
             maxTries: {
