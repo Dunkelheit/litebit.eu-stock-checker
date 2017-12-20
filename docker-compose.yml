@@ -1,0 +1,4 @@
+version: '3'
+services:
+    litebit-eu-stock-checker:
+        build: .
